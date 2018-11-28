@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-book';
+  componentToShow = 'recipes';
+  onPanelSelected(evt) {
+    this.componentToShow = evt.name;
+  }
 }
