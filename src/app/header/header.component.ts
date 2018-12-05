@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,14 +7,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() panelSelected = new EventEmitter<{name: string}>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-  }
-
-  showPanel(panelToShow: string) {
-    this.panelSelected.emit({name: panelToShow});
   }
 }
