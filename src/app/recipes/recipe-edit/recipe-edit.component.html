@@ -1,0 +1,6 @@
+<div>
+  <p>{{recipe.name}}</p>
+  <p>{{recipe.description}}</p>
+  <p>{{recipe.imagePath}}</p>
+  <p *ngFor="let ing of recipe.ingredients">{{ing.name}} ({{ing.amount}})</p>
+</div>
